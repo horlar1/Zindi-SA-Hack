@@ -179,8 +179,11 @@ for (i in 1:length(int.seed)) {
 }
 
 
-
-
+pred = predte/5
+pred = ifelse(pred<0,0,pred)
+pred = pred*1.04
+sub = cbind(test.id,pred)
+write.csv(sub,file = paste0(subm.dir,"/sub.csv"),row.names = F)
 
 
 
